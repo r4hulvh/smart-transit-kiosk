@@ -1,0 +1,45 @@
+ESP32 (30-pin) Pin Diagram and Connections for TTP223, OLED, RC522 RFID, IR, LED, Push Button, and Buzzer
+
++-----------------------------------------------------+
+|                   ESP32 (30-pin)                    |
++-------------------------+---------------------------+
+| Component               | Connection                |
++-------------------------+---------------------------+
+| **TTP223 Touch Sensors**|                           |
+| - Touch Sensor 1        | Digital Pin GPIO4         |
+| - Touch Sensor 2        | Digital Pin GPIO15        |
+| - Touch Sensor 3        | Digital Pin GPIO13        |
++-------------------------+---------------------------+
+| **OLED Display**        |(1.3", 128�64, I2C, 4-pin)|
+| - VCC                   | 3.3V (or as required)     |
+| - GND                   | GND                       |
+| - SDA                   | GPIO21                    |
+| - SCL                   | GPIO22                    |
++-------------------------+---------------------------+
+| **RC522 RFID Module**   | (SPI based)               |
+| - VCC                   | 3.3V (check module specs) |
+| - GND                   | GND                       |
+| - RST                   | GPIO16                    |
+| - SS (SDA)              | GPIO17                    |
+| - MOSI                  | SPI MOSI (default GPIO23) |
+| - MISO                  | SPI MISO (default GPIO19) |
+| - SCK                   | SPI SCK (default GPIO18)  |
++-------------------------+---------------------------+
+| **IR Sensor**           | (Active Low)              |
+| - Signal Out            | GPIO33                    |
+| - VCC                   | (Typically 3.3V or 5V)    |
+| - GND                   | GND                       |
++-------------------------+---------------------------+
+| **LED**                 |                           |
+| - LED Anode             | GPIO25 (via resistor)     |
+| - LED Cathode           | GND                       |
++-------------------------+---------------------------+
+| **Push Button**         |                           |
+| - One Terminal          | GPIO26 (with internal     |
+|                         | pull-up enabled)          |
+| - Other Terminal        | GND                       |
++-------------------------+---------------------------+
+| **Buzzer**              |                           |
+| - Positive Terminal     | GPIO32                    |
+| - Negative Terminal     | GND                       |
++-------------------------+---------------------------+
